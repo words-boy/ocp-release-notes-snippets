@@ -1,13 +1,13 @@
 {
-  "name": "autocomplete-asciidoc",
+  "name": "ocp-release-notes-snippets",
   "version": "0.0.0",
-  "description": "AsciiDoc language autocompletions",
+  "description": "ocp release notes autocompletions",
   "keywords": [
     "asciidoctor",
     "asciidoc",
     "autocomplete"
   ],
-  "repository": "https://github.com/asciidoctor/atom-autocomplete-asciidoc",
+  "repository": "https://github.com/words-boy/ocp-release-notes-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

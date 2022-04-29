@@ -1,340 +1,135 @@
 '.source.asciidoc:not(.markup.code)':
 
-  # Blocks
+  # Release notes 3.x
   #
-  'Comment Block':
-    description: 'Comment block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#comments'
-    prefix: '//'
+  'Release Notes 3.x bug fix update':
+    description: 'When image advisory is RHBA'
+    descriptionMoreURL: 'https://redhat-documentation.github.io/supplementary-style-guide/#release-notes'
+    prefix: 'rn3-bug-fix'
     body: '''
-      ////
-      $1
-      ////
-      $0
-      '''
-  'Sidebar Block':
-    description: 'Sidebar block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#delimited-blocks'
-    prefix: '**'
-    body: '''
-      .${1:title}
-      ****
-      ${2}
-      ****
-      $0
-      '''
-  'Example Block':
-    description: 'Example block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#example'
-    prefix: '=='
-    body: '''
-      .${1:title}
-      ====
-      ${2}
-      ====
-      $0
-      '''
-  'Listing Block':
-    description: 'Listing block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#listing-blocks'
-    prefix: '--'
-    body: '''
+      [[ocp-3-11-$1]]
+      === RH$2A-2022:$3 - {product-title} 3.11.$1 bug fix update
+
+      Issued: 2022-$6
+
+      {product-title} release 3.11.$1 is now available. The list of packages and bug fixes included in the update are documented in the link:https://access.redhat.com/errata/RH$2A-2022:$3[RH$2A-2022:$3] advisory. The container images included in the update are provided by the link:https://access.redhat.com/errata/RH$4A-2022:$5[RH$4A-2022:$5] advisory.
+
+      ${7:
+      [[ocp-3-11-$1-bug-fix]]
+      ==== Bug fix
+
+      }
+      [[ocp-3-11-$1-images]]
+      ==== Images
+
+      This release updates the Red Hat Container Registry (`registry.redhat.io`) with the following images:
       ----
-      $1
+
       ----
-      $0
+
+      [[ocp-3-11-$1-updating]]
+      ==== Updating
+
+      To update an existing {product-title} 3.10 or 3.11 cluster to this latest release, see xref:../upgrading/index.adoc#install-config-upgrading-index[Upgrade methods and strategies] for instructions.
       '''
-  'Source Block':
-    description: 'Source block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#listing-blocks'
-    prefix: '--$'
+  'Release Notes 3.x security fix update':
+    description: 'When image advisory is RHSA'
+    descriptionMoreURL: 'https://redhat-documentation.github.io/supplementary-style-guide/#release-notes'
+    prefix: 'rn3-security-fix'
     body: '''
-      [source, $1]
+      [[ocp-3-11-$1]]
+      === RH$2A-2022:$3 - {product-title} 3.11.$1 bug fix and security update
+
+      Issued: 2022-$6
+
+      {product-title} release 3.11.$1, which includes security updates, is now available. The list of packages and bug fixes included in the update are documented in the link:https://access.redhat.com/errata/RH$2A-2022:$3[RH$2A-2022:$3] advisory. The container images included in the update are provided by the link:https://access.redhat.com/errata/RH$4A-2022:$5[RH$4A-2022:$5] advisory.
+
+      ${7:
+      [[ocp-3-11-$1-bug-fix]]
+      ==== Bug fix
+
+      }
+      [[ocp-3-11-$1-images]]
+      ==== Images
+
+      This release updates the Red Hat Container Registry (`registry.redhat.io`) with the following images:
       ----
-      $2
+
       ----
-      $0
-      '''
-  'Literal Block':
-    description: 'Literal block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#literal-text-and-blocks'
-    prefix: ',,'
-    body: '''
-      ....
-      $1
-      ....
-      $0
-      '''
-  'Passthrough Block':
-    description: 'Passthrough block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#pass-bl'
-    prefix: '++'
-    body: '''
-      ++++
-      $1
-      ++++
-      $0
-      '''
-  'Quote Block':
-    description: 'Quote block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#quote'
-    prefix: '__'
-    body: '''
-      [quote, ${1:attribution}, ${2:citetitle}]
-      ____
-      $3
-      ____
-      $0
-      '''
-  'Open Block':
-    description: 'Open block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#open-blocks'
-    prefix: '~~'
-    body: '''
-      --
-      $1
-      --
-      $0
-      '''
-  'Table Block':
-    description: 'Table block'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#tables'
-    prefix: '|='
-    body: '''
-      |===
-      |$1
-      |===
-      '''
-  'Block Image':
-    description: 'Block image'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#images'
-    prefix: 'image'
-    body: '''
-      image::${1:target}[${2:alt}]
 
-      $0
+      [[ocp-3-11-$1-updating]]
+      ==== Updating
+
+      To update an existing {product-title} 3.10 or 3.11 cluster to this latest release, see xref:../upgrading/index.adoc#install-config-upgrading-index[Upgrade methods and strategies] for instructions.
       '''
 
-  # Sections
+  # Release notes 4.x
   #
-  'Document Title':
-    description: 'Document title (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#document-title'
-    prefix: '=0'
+  'Release Notes 4.x bug fix update':
+    description: 'When image advisory is RHBA'
+    descriptionMoreURL: 'https://redhat-documentation.github.io/supplementary-style-guide/#release-notes'
+    prefix: 'rn4-bug-fix'
     body: '''
-      = $1
-      $0
+      [id="ocp-4-$1-$2"]
+      === RH$3A-2022:$4 - {product-title} 4.$1.$2 bug fix update
+
+      Issued: 2022-$7
+
+      {product-title} release 4.$1.$2 is now available. The bug fixes that are included in the update are listed in the link:https://access.redhat.com/errata/RH$3A-2022:$4[RH$3A-2022:$4] advisory. The RPM packages that are included in the update are provided by the link:https://access.redhat.com/errata/RH$5A-2022:$6[RH$5A-2022:$6] advisory.
+
+      Space precluded documenting all of the container images for this release in the advisory. See the following article for notes on the container images in this release:
+
+      link:https://access.redhat.com/solutions/$8[{product-title} 4.$1.$2 container image list]
+      ${9:
+      [id="ocp-4-$1-$2-features"]
+      ==== Features
+      }
+
+      ${10:
+      [id="ocp-4-$1-$2-known-issues"]
+      ==== Known issues
+      }
+
+      ${11:
+      [id="ocp-4-$1-$2-bug-fixes"]
+      ==== Bug fixes
+      }
+      [id="ocp-4-$1-$2-updating"]
+      ==== Updating
+
+      To upgrade an existing {product-title} 4.$1 cluster to this latest release, see xref:../updating/updating-cluster-cli.adoc[Updating a cluster using the CLI] for instructions.
       '''
-  'Section 0 / Part':
-    description: 'Level 0 section / part (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=1'
+  'Release Notes 4.x security fix update':
+    description: 'When image advisory is RHSA'
+    descriptionMoreURL: 'https://redhat-documentation.github.io/supplementary-style-guide/#release-notes'
+    prefix: 'rn4-security-fix'
     body: '''
-      = $1
+      [id="ocp-4-$1-$2"]
+      === RH$3A-2022:$4 - {product-title} 4.$1.$2 bug fix and security update
 
-      $0
-      '''
-  'Section 1 / Chapter':
-    description: 'Level 1 section / chapter (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=2'
-    body: '''
-      == $1
+      Issued: 2022-$7
 
-      $0
-      '''
-  'Section 2':
-    description: 'Level 2 section (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=3'
-    body: '''
-      === $1
+      {product-title} release 4.$1.$2, which includes security updates, is now available. The bug fixes that are included in the update are listed in the link:https://access.redhat.com/errata/RH$3A-2022:$4[RH$3A-2022:$4] advisory. The RPM packages that are included in the update are provided by the link:https://access.redhat.com/errata/RH$5A-2022:$6[RH$5A-2022:$6] advisory.
 
-      $0
-      '''
-  'Section 3':
-    description: 'Level 3 section (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=4'
-    body: '''
-      ==== $1
+      Space precluded documenting all of the container images for this release in the advisory. See the following article for notes on the container images in this release:
 
-      $0
-      '''
-  'Section 4':
-    description: 'Level 4 section (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=5'
-    body: '''
-      ===== $1
+      link:https://access.redhat.com/solutions/$8[{product-title} 4.$1.$2 container image list]
+      ${9:
+      [id="ocp-4-$1-$2-features"]
+      ==== Features
+      }
 
-      $0
-      '''
-  'Section 5':
-    description: 'Level 5 section (single-line syntax)'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#sections'
-    prefix: '=6'
-    body: '''
-      ====== $1
+      ${10:
+      [id="ocp-4-$1-$2-known-issues"]
+      ==== Known issues
+      }
 
-      $0
-      '''
+      ${11:
+      [id="ocp-4-$1-$2-bug-fixes"]
+      ==== Bug fixes
+      }
+      [id="ocp-4-$1-$2-updating"]
+      ==== Updating
 
-  # Inline Macros
-  #
-  'Keyboard':
-    description: 'Keyboard shortcut'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#keyboard-shortcuts'
-    prefix: 'kbd'
-    body: 'kbd:[$1] $0'
-  'Menu selection':
-    description: 'Menu selection'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#menu-selections'
-    prefix: 'menu'
-    body: 'menu:$1[$2] $0'
-  'UI buttons':
-    description: 'UI button'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#ui-buttons'
-    prefix: 'btn'
-    body: 'btn:[$1] $0'
-  'Inline Image':
-    description: 'Inline image'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#images'
-    prefix: 'img'
-    body: 'image:${1:target}[${2:alt}] $0'
-  'Inline Icon':
-    description: 'Inline icon'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#inline-icons'
-    prefix: 'icon'
-    body: 'icon:${1:name}[] $0'
-  'Link macro':
-    description: 'Explicit link'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#url'
-    prefix: 'link'
-    body: 'link:${1:url}[${2:label}] $0'
-  'mailto link':
-    description: 'E-mail link'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#url'
-    prefix: 'mail'
-    body: 'mailto:${1:email}[${2:label}] $0'
-  'stem':
-    description: 'STEM expression'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#activating-stem-support'
-    prefix: 'stem'
-    body: 'stem:[${1:expr}] $0'
-  'stem asciimath':
-    description: 'AsciiMath STEM expression'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#activating-stem-support'
-    prefix: 'asciimath'
-    body: 'asciimath:[${1:expr}] $0'
-  'stem latexmath':
-    description: 'LaTeX STEM expression'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#activating-stem-support'
-    prefix: 'latex'
-    body: 'latexmath:[${1:expr}] $0'
-  'Footnote':
-    description: 'Footnote'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#user-footnotes'
-    prefix: 'fn'
-    body: 'footnote:[$1] $0'
-  'Footnote reference':
-    description: 'Footnote reference'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#user-footnotes'
-    prefix: 'fnref'
-    body: 'footnoteref:[$1] $0'
-
-  # Others
-  #
-  'Attribute Entry':
-    description: 'Define or update a document attribute'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#setting-attributes-on-a-document'
-    prefix: '::'
-    body: '''
-      :${1:name}: ${2:value}
-      $0
-      '''
-  'Author':
-    description: 'Author and email line'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#author-and-email'
-    prefix: 'author'
-    body: '${1:author} <${2:email}>$0'
-  'Revision information':
-    description: 'Document revision line'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#revision-number-date-and-remark'
-    prefix: 'rev'
-    body: '''
-      v${1:1.0.0}, ${2:date}
-      $0
-      '''
-  'Subscript':
-    description: 'subscript'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#subscript-and-superscript'
-    prefix: 'sub'
-    body: '~$1~ $0'
-  'Superscript':
-    description: 'superscript'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#subscript-and-superscript'
-    prefix: 'sup'
-    body: '^$1^ $0'
-  'Callout':
-    description: 'Callout number'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#callouts'
-    prefix: 'co'
-    body: '<$1> $0'
-  'Unchecked':
-    description: 'Unchecked checklist item'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#checklist'
-    prefix: '-o'
-    body: '- [ ] $0'
-  'Checked':
-    description: 'Checked checklist item'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#checklist'
-    prefix: '-x'
-    body: '- [x] $0'
-
-  # Templates
-  #
-  'Man Page':
-    description: 'Man page template'
-    descriptionMoreURL: 'http://asciidoctor.org/docs/user-manual/#man-pages'
-    # See also http://docopt.org/ for how to describe commmand line options.
-    prefix: 'man'
-    body: '''
-      = {manname}(1)
-      ${1:Author Name}
-      v${2:1.0.0}
-      :doctype: manpage
-      :manname: ${3:command}
-      :manmanual: User Commands
-      :mansource: {revnumber}
-
-      == NAME
-
-      {manname} - ${4:description}
-
-      == SYNOPSIS
-
-      *{manname}* ['OPTION']... 'FILE'...
-
-      == OPTIONS
-
-      *-${5:short-option}, --${6:long-option}*::
-        ${7:Description of option.}
-
-      $0
-
-      == EXIT STATUS
-
-      *0*::
-        Success.
-
-      *1*::
-        Failure.
-
-      == COPYRIGHT
-
-      Copyright \\\\(C) {author}.
-
-      This is free software.
-      See the source for copying conditions.
+      To upgrade an existing {product-title} 4.$1 cluster to this latest release, see xref:../updating/updating-cluster-cli.adoc[Updating a cluster using the CLI] for instructions.
       '''
